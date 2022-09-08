@@ -1,21 +1,27 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import PortfoliList from '../portfolioList/PortfoliList'
 import './portfolio.css'
+import {featuredPortfolio, 
+webPortfolio,
+MobilePortfolio,
+designPortfolio,
+contentPortfolio} from '../../data.js'  
 
 const Portfolio = () => {
 
   const [selected, setSelected] = useState("featured")
+  const [data, setData] = useState([])
   const list = [
     {
       id: "featured",
       title: "Featured"
     },
     {
-      id : "Web",
+      id : "web",
       title: "Web App"
     },
     {
-      id : "moblie",
+      id : "mobile",
       title: "Moblie App"
     },
     {
@@ -28,6 +34,29 @@ const Portfolio = () => {
     },
     
   ];
+
+  useEffect(()=>{
+    switch(selected){
+      case "featured" :
+        setData(featuredPortfolio)
+        break;
+      case "web" :
+        setData(webPortfolio)
+        break;
+      case "mobile" :
+        setData(MobilePortfolio)
+        break;
+      case "design" :
+        setData(designPortfolio)
+        break;
+      case "content" :
+        setData(contentPortfolio)
+        break;
+      default:
+        setData(featuredPortfolio)
+      
+    }
+  }, [selected])
   return (
     <div className='portfolio' id='portfolio'>
       <h1>Portfolio</h1>
@@ -36,34 +65,18 @@ const Portfolio = () => {
           <PortfoliList title = {item.title} 
           active = {selected === item.id} 
           setSelected = {setSelected}
-          id = {item.id}/>
+          id = {item.id}
+          key = {item.id}/>
         )}
       </ul>
       <div className="container">
-        <div className="item">  
-          <img src="assets/feature1.png"  alt="" />
-          <h3>Banking App </h3>
-        </div>
-        <div className="item">
-          <img src="assets/feature1.png"  alt="" />
-          <h3>Banking App </h3>
-        </div>
-        <div className="item">
-          <img src="assets/feature1.png"  alt="" />
-          <h3>Banking App </h3>
-        </div>
-        <div className="item">
-          <img src="assets/feature1.png"  alt="" />
-          <h3>Banking App </h3>
-        </div>
-        <div className="item">
-          <img src="assets/feature1.png"  alt="" />
-          <h3>Banking App </h3>
-        </div>
-        <div className="item">
-          <img src="assets/feature1.png"  alt="" />
-          <h3>Banking App </h3>
-        </div>
+        {data.map((d)=> (
+          <div className="item"  key={d.id}>  
+            <img src="assets/feature1.png"  alt="" />
+            <h3>{d.title}</h3>
+          </div>  
+          ))}
+        
       </div>
     </div>
   )
