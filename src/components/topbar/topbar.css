@@ -1,0 +1,83 @@
+@import "../../global.css";
+.topbar{
+    background-color: white;
+    color: var(--mainColor);
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all 1s ease;
+}
+
+.wrapper{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.itemContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.icon{
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.itemContainer span{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
+
+.humburger{
+    width: 31px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.humburger span{
+    width: 100%;
+    height: 3px;
+    background-color: var(--mainColor);
+    transform-origin: left;
+    transition: all 1s ease;
+}
+
+.active{
+    background-color: var(--mainColor);
+    color: white;
+}
+
+.active .humburger span:first-child{
+    background-color: white;
+    transform: rotate(45deg);  
+}
+
+.active .humburger span:last-child{
+    background-color: white;
+    transform: rotate(-45deg); 
+}
+
+.active .humburger span:nth-child(2){
+    opacity: 0;
+}
