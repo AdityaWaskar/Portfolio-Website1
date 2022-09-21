@@ -1,6 +1,8 @@
+
 .intro{
     background-color: white;
     display: flex;
+    gap: 144px;
     /* flex-wrap: wrap; */
 }
 
@@ -16,10 +18,10 @@
     flex: 0.5;
     /* background-color: yellow; */
     overflow: hidden;
- 
+    
 }
 
-.imageContainer{
+.intro .imageContainer{
     overflow: hidden;
     width: 700px;
     height: 700px ;
@@ -31,12 +33,12 @@
     float: right;
 }
 
-.imageContainer img{
+.intro .imageContainer img{
     height: 90%; 
 }
 
 
-.right .wrapper{
+.intro .right .wrapper{
     width: 100%;
     height: 100%;
     /* padding-left: 50px; */
@@ -45,25 +47,25 @@
     justify-content: center; 
 }
 
-.wrapper h1{
+.intro .wrapper h1{
     font-size: 60px;
     margin: 10px 0;
 }
 
-.wrapper h2{
+.intro .wrapper h2{
     font-size: 35px;
 }
 
-.wrapper h3{
-   font-size: 30px; 
+.intro .wrapper h3{
+    font-size: 30px; 
 }
 
-.wrapper h3 span{
+.intro .wrapper h3 span{
     font-size: inherit;
     color: crimson;
 }
 
-.intro a{
+.intro .intro a{
     position: absolute;
     bottom: 10px ;
     left: 78%
@@ -80,7 +82,7 @@
     }
 }
 
-.ityped-cursor{
+.intro .ityped-cursor{
     animation: blink 1s infinite;
 }
 
@@ -92,3 +94,32 @@
         opacity: 0;
     }
 }
+    
+    @media screen and (max-width: 768px) {
+        /* for Intro section */
+        .intro {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+    
+        .intro .imageContainer{
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .intro .imageContainer img{
+            height: 50%;
+        }
+
+        .intro .wrapper{
+            padding-left:  0;
+            align-items: center;
+        } 
+        .intro .wrapper h1{
+            font-size: 40px;
+        }
+        .intro .wrapper h3{
+            font-size: 20px;
+            margin: 0 25px
+        }
+    }

@@ -1,3 +1,127 @@
 .works{
-    background-color: lightpink;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.works .slider{
+    height: 400px;
+    display: flex;
+    position: absolute;
+    left: 0;
+}
+
+.works .slider .container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works .slider .container .item{
+    color: black;
+    width: 700px;
+    height: 93%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works .slider .container .item .left{
+    flex: 4;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.works .slider .container .item .right{
+    flex: 8;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.works .slider .container .item .right img{
+    width: 400px;
+    transform: rotate(-10deg);
+}
+
+.works .slider .leftContainer{
+    width : 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 37px;
+}
+
+.works .slider .leftContainer .imageContainer{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: rgb(245, 179, 155);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.works .leftContainer .imageContainer img{
+    width: 25px;
+    height: 29px;
+}
+
+.works h2{
+    font-size: 20px;
+}
+
+.works p{
+    font-size: 13px;
+}
+
+.works span{
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.works .arrow{
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+}
+.works .leftarrow{
+    left: 100px;
+    transform: rotateY(180deg);
+}
+
+.works .rightarrow{
+    right: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    /* for Intro section */
+    .works .arrow {
+        display: none;
+    }
+
+    .works .slider{
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .works .slider .container .item{
+        width: 90%;
+        height: 180px;
+        margin: 20px 0;
+    }
 }

@@ -10,36 +10,36 @@
     transition: all 1s ease;
 }
 
-.wrapper{
+.topbar .wrapper{
     padding: 10px 30px;
     display: flex;
     align-items: center; 
     justify-content: space-between;
 }
 
-.left{
+.topbar .left{
     display: flex;
     align-items: center;
     margin-right: 40px;
 }
 
-.itemContainer{
+.topbar .itemContainer{
     display: flex;
     align-items: center;
     margin-left: 30px;
 }
 
-.icon{
+.topbar .icon{
     font-size: 18px;
     margin-right: 5px;
 }
 
-.itemContainer span{
+.topbar .itemContainer span{
     font-size: 15px;
     font-weight: 500;
 }
 
-.logo{
+.topbar .logo{
     font-size: 40px;
     font-weight: 700;
     text-decoration: none;
@@ -80,4 +80,10 @@
 
 .active .humburger span:nth-child(2){
     opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .topbar .itemContainer{
+        display: none;
+    }
 }

@@ -15,11 +15,11 @@
     transition: all 1s ease;
 }
 
-.active{
+.menu .active{
     right: 0;
 }
 
-ul{
+.menu ul{
     margin: 0;
     padding: 0;
     list-style: none;
@@ -29,15 +29,15 @@ ul{
     width: 60%;
 }
 
-ul li{
+.menu ul li{
     margin-bottom: 25px;
 }
 
-ul li:hover{
+.menu ul li:hover{
     font-weight: 500;
 }
 
-ul li a{
+.menu ul li a{
     font-size: inherit;
     color: inherit;
     text-decoration: none;

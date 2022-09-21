@@ -20,5 +20,6 @@
 .sections > *{
     width: 100vw;
     height: calc(100vh - 70px);
+    top: 70px;
     scroll-snap-align: start;
 }
