@@ -1,9 +1,11 @@
 import './menu.css'
+// import './menu.css'
 
 const Menu = (param) => {
   return (
     <div className={"menu " + (param.menuOpen ? "active":"")}>
-        <ul>
+    {/* <div className={"menu active"}> */}
+        <ul>  
             <li onClick={() => param.setMenuOpen(false)}><a href="#intro">Home</a></li>
             <li onClick={() => param.setMenuOpen(false)}><a href="#portfolio">Portfolio</a></li>
             <li onClick={() => param.setMenuOpen(false)}><a href="#works">Works</a></li>

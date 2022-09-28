@@ -10,7 +10,7 @@ const Topbar = (param) => {
           <a href="#intro" className='logo'>.genius</a>
           <div className="itemContainer">
             <BsFillPersonFill className='icon' />
-            <span>+44 924 12 74</span>
+            <span>+91 9082375004</span>
           </div>
           <div className="itemContainer">
             <AiOutlineMail className='icon'/>
@@ -18,7 +18,7 @@ const Topbar = (param) => {
           </div>
         </div>
         <div className="right">
-          <div className="humburger" onClick={() => param.setMenuOpen(!param. menuOpen)}>
+          <div className="humburger" onClick={() => param.setMenuOpen(!param.menuOpen)}>
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>

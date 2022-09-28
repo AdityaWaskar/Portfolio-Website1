@@ -1,3 +1,4 @@
+@import '../../global.css';
 
 .intro{
     background-color: white;
@@ -58,6 +59,11 @@
 
 .intro .wrapper h3{
     font-size: 30px; 
+}
+
+.intro .wrapper h3 .text_animation{
+    font-size: inherit;
+    color: crimson;
 }
 
 .intro .wrapper h3 span{

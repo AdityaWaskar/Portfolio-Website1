@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 
-.active{
+.portfolioList .active{
     background-color: var(--mainColor);
     color: white;
 }

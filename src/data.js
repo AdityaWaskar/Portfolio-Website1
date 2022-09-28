@@ -15,15 +15,23 @@ export const featuredPortfolio = [
 export const webPortfolio = [
     {
         id:1,
-        title: "Social Media wesite",
+        title: "Marvel website",
+        img: "assets/website_photos/website3.jpg",
     },
     {
         id:2,
-        title: "Attendance Tracker website",
+        title: "Blog website",
+        img: "assets/website_photos/website.jpg",
     },
     {
         id:3,
-        title: "E-commerce web",
+        title: "Spotify clone",
+        img: "assets/website_photos/website2.jpg",
+    },
+    {
+        id:4,
+        title: "Online meal website",
+        img: "assets/website_photos/website1.jpg",
     },
 ]
 export const MobilePortfolio = [
