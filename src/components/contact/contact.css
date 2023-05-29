@@ -1,6 +1,8 @@
 .contact{
     background-color: white;
     display: flex;
+    justify-content: center;
+    align-items: center ;
 }
 
 .contact .left{
@@ -14,40 +16,54 @@
 
 .contact .right{
     flex: 1;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.contact .right h2{
-    font-size: 30px;
-}
-
-.contact form{
-    width: 70%;
-    height: 70%;
+.contact .right .form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    background-color: #999cf7de; 
+    gap: 50px;
+    padding: 50px 40px;
+    border-radius: 5px;
+    
+}
+.contact .right .form h2{
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
-.contact form input{
+.contact .form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, .contact form textarea{
     width: 300px;
     height: 30px;
     font-size: 14px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 10px;
+    outline: none;
 }
 
 .contact form textarea{
-    width: 300px;
     height: 200px;
-    font-size: 14px;
+    margin-bottom: 40px;
 }
 
 .contact form button{
-    width: 150px;
-    height: 30px;
+    width: 300px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
     color: white;
     background-color: crimson;
     border: none;
@@ -65,6 +81,26 @@
     font-size: 14px;
 }
 
+
+/* Links csss */
+.subsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact .links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center; 
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    padding: 1vh 0;
+    border-radius: 4px;
+    background-color: #e0e5ffb3;
+    box-shadow: 0 0 15px 0 grey;
+    width: 93%;
+} 
+
 @media screen and (max-width: 768px) {
     .contact{
         flex-direction: column;
@@ -74,9 +110,12 @@
         width: 200px;
         height: 20px;
     }
+    .contact form button{
+        width: 200px;
+    }
     .contact form textarea{
         width: 200px;
         height: 100px;
     }
-
+    
 }

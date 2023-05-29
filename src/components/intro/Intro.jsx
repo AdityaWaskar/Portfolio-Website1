@@ -1,9 +1,9 @@
-import './intro.css'
-import  Typical from 'react-typical'
+import "./intro.css";
+import Typical from "react-typical";
 
 const Intro = () => {
   return (
-    <div className='intro' id='intro'>
+    <div className="intro" id="intro">
       <div className="left">
         <div className="imageContainer">
           <img src="assets/man.png" alt="" />
@@ -13,20 +13,33 @@ const Intro = () => {
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
           <h1>Aditya Waskar</h1>
-          <h3>Freelancer, <Typical className='text_animation'
-            loop={Infinity}
-            wrapper='b'
-            steps={['Coder',1000,
-                    'Frontend Developer', 1000,
-                    'Backend Developer', 1000]}      
-          /></h3>
+          <h3>
+            Freelancer,{" "}
+            <Typical
+              className="text_animation"
+              loop={Infinity}
+              wrapper="b"
+              steps={[
+                "Coder",
+                1000,
+                "Frontend Developer",
+                1000,
+                "Backend Developer",
+                1000,
+              ]}
+            />
+          </h3>
+          <div className="buttons">
+            <button>Download CV</button>
+            <button>Let's Talk</button>
+          </div>
         </div>
         <a href="#portfolio">
-          <img src="assets/down.png" alt="" />
+          <img src="assets/down.png" alt="sas " />
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

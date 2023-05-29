@@ -1,9 +1,18 @@
-import {Topbar, Intro, Contact, Feedbacks, Portfolio, Works, Menu} from './components'
-import './app.css'
-import { useState } from 'react';
+import {
+  Topbar,
+  Intro,
+  Contact,
+  Feedbacks,
+  Portfolio,
+  Works,
+  Menu,
+} from "./components";
+import "./app.css";
+import { useState } from "react";
+import Footer from "./components/footer/Footer";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="App">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

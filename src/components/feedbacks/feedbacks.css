@@ -1,4 +1,5 @@
 .feedback{
+    margin-top: 10vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -7,6 +8,7 @@
 
 .feedback h1{
     font-size: 50px;
+    text-transform: uppercase;
 }
 
 .feedback .container{
@@ -90,12 +92,14 @@
     }
 
     .feedback h1{
-        font-size: 50px;
+        font-size: 32px;
     }
 
     .feedback .container{
         flex-direction: column;
         height: 100%;
+        gap: 13px;
+        padding: 3% 0;
     }
 
     .feedback .card{
