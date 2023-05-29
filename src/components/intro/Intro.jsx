@@ -1,6 +1,21 @@
 import "./intro.css";
 import Typical from "react-typical";
 
+const onButtonClick = () => {
+  // using Java Script method to get PDF file
+  fetch("resume.pdf").then((response) => {
+    response.blob().then((blob) => {
+      // Creating new object of PDF file
+      const fileURL = window.URL.createObjectURL(blob);
+      // Setting various property values
+      let alink = document.createElement("a");
+      alink.href = fileURL;
+      alink.download = "adityawaskar.pdf";
+      alink.click();
+    });
+  });
+};
+
 const Intro = () => {
   return (
     <div className="intro" id="intro">
@@ -30,7 +45,7 @@ const Intro = () => {
             />
           </h3>
           <div className="buttons">
-            <button>Download CV</button>
+            <button onClick={onButtonClick}>Download CV</button>
             <button>Let's Talk</button>
           </div>
         </div>
